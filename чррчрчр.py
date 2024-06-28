@@ -8,8 +8,8 @@ TOKEN = '7401738175:AAH1NTzIYTgpfj6UeOvnO-zvoiaWEzKsKSg'  # Вставте св�
 bot = telebot.TeleBot(TOKEN)
 
 prefixes = [
-"Как же",
- 
+    "Как же",
+]
 # Список суффиксов для оскорблений
 suffixes = [
     "тупой, что даже компьютер не может тебя понять.",
@@ -38,6 +38,7 @@ def handle_text(message):
     bot.send_message(message.chat.id, random_phrase)
 
 if __name__ == "__main__":
+    # Запуск бота локально
     bot.polling(none_stop=True)
 
 
